@@ -26,8 +26,8 @@ export const POST = async (request) => {
 		const session = await gateway.checkout.sessions.create({
 			line_items: cartItems,
 			mode: "payment",
-			success_url: `http://localhost:3000/success`,
-			cancel_url: `http://localhost:3000/cancel`,
+			success_url: `https://cart-mgmt.vercel.app/success`,
+			cancel_url: `https://cart-mgmt.vercel.app/cancel`,
 		});
 
 		// const payment_info = new Payment({
